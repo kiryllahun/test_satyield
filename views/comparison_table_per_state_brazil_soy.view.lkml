@@ -39,7 +39,7 @@ view: comparison_table_per_state_brazil_soy {
 
   dimension: state {
     type: string
-    sql: ${TABLE}.State ;;
+    sql: ${TABLE}.`State` ;;
   }
 
   dimension: true_area {
@@ -49,7 +49,7 @@ view: comparison_table_per_state_brazil_soy {
   }
 
   dimension: true_production {
-    type: number
+    type: string
     description: "x1000"
     sql: ${TABLE}.`True Production` ;;
   }
@@ -60,8 +60,8 @@ view: comparison_table_per_state_brazil_soy {
   }
 
   dimension: year {
-    type: number
-    sql: ${TABLE}.Year ;;
+    type: string
+    sql: ${TABLE}.`Year` ;;
   }
 
   dimension: yield_error {
