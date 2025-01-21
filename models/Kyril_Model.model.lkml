@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "test_connection"
+connection: "test_bq_looker"
 
 # include all the views
 include: "/views/**/*.view.lkml"
@@ -25,9 +25,4 @@ persist_with: Kyril_Model_default_datagroup
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
 # Each joined view also needs to define a primary key.
 
-explore: comparison_table_per_state_brazil_soy {}
-
-explore: comparison_table_per_state_usa_soy {}
-
 explore: comparison_table_per_state_usa_corn {}
-
