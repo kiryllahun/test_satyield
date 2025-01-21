@@ -14,3 +14,4 @@ datagroup: kiryl_new_default_datagroup {
 
 persist_with: kiryl_new_default_datagroup
 
+explore: usa_corn {}
