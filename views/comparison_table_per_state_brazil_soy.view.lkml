@@ -2,7 +2,7 @@
 view: comparison_table_per_state_brazil_soy {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `SatYield_Test_database.Comparison Table per State_Brazil_SOY` ;;
+  sql_table_name: `SatYield_Test_database.Comparison_Table_per_State_Brazil_SOY` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
