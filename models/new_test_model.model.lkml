@@ -31,3 +31,4 @@ explore: usa_corn {}
 
 explore: brazil_soy {}
 
+explore: summary_table {}
