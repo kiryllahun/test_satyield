@@ -72,6 +72,18 @@ view: summary_table {
     value_format: "#,##0.00" # Optional: Format to two decimal places
     description: "Calculates the total sum of predicted_area."
   }
+  measure: total_true_yield {
+    type: sum
+    sql: ${true_yield} ;;
+    value_format: "#,##0.00" # Optional: Format to two decimal places
+    description: "Calculates the total sum of true_yield."
+  }
+  measure: total_predicted_yield {
+    type: sum
+    sql: ${predicted_yield} ;;
+    value_format: "#,##0.00" # Optional: Format to two decimal places
+    description: "Calculates the total sum of predicted_yield."
+  }
   measure: weighted_average_yield {
     type: number
     sql: SUM(${true_area} * ${true_yield}) / SUM(${true_area}) ;;
