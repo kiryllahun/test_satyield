@@ -60,4 +60,11 @@ view: summary_table {
   measure: count {
     type: count
   }
+  measure: weighted_average_yield {
+    type: number
+    sql: SUM(${true_area} * ${true_yield}) / SUM(${true_area}) ;;
+    value_format: "#,##0.00" # Optional: Format to two decimal places
+    description: "Calculates the weighted average yield using true_area and true_yield."
+  }
+
 }
