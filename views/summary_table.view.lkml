@@ -60,11 +60,28 @@ view: summary_table {
   measure: count {
     type: count
   }
+  measure: total_true_area {
+    type: sum
+    sql: ${true_area} ;;
+    value_format: "#,##0.00" # Optional: Format to two decimal places
+    description: "Calculates the total sum of true_area."
+  }
+  measure: total_predicted_area {
+    type: sum
+    sql: ${predicted_area} ;;
+    value_format: "#,##0.00" # Optional: Format to two decimal places
+    description: "Calculates the total sum of predicted_area."
+  }
   measure: weighted_average_yield {
     type: number
     sql: SUM(${true_area} * ${true_yield}) / SUM(${true_area}) ;;
     value_format: "#,##0.00" # Optional: Format to two decimal places
     description: "Calculates the weighted average yield using true_area and true_yield."
   }
-
+  measure: weighted_average_yield_predicted {
+    type: number
+    sql: SUM(${predicted_area} * ${predicted_yield}) / SUM(${predicted_area}) ;;
+    value_format: "#,##0.00" # Optional: Format to two decimal places
+    description: "Calculates the weighted average yield using predicted_area and predicted_yield."
+  }
 }
