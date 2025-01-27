@@ -103,4 +103,13 @@ view: summary_table {
       WHEN ${crop_type} = 'Corn' THEN '🌽 Corn'
       ELSE '🫘 Soy'
       END ;;
-    label: "Crop Type Custom"}}
+    label: "Crop Type Custom"}
+  dimension: region_type_custom {
+    type: string
+    sql:
+    CASE
+      WHEN ${region} = 'Brazil' THEN '🇧🇷 Brazil'
+      ELSE '🇺🇸 US'
+    END ;;
+    label: "Region Custom"
+  }}
