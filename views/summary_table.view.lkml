@@ -96,4 +96,11 @@ view: summary_table {
     value_format: "#,##0.00" # Optional: Format to two decimal places
     description: "Calculates the weighted average yield using predicted_area and predicted_yield."
   }
-}
+  dimension: crop_type_custom {
+    type: string
+    sql:
+      CASE
+      WHEN ${crop_type} = 'Corn' THEN '🌽 Corn'
+      ELSE '🫘 Soy'
+      END ;;
+    label: "Crop Type Custom"}}
